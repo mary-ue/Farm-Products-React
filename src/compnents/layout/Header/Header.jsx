@@ -7,9 +7,11 @@ export const Header = () => {
 
 
   return (
-    <Container className={s.HeaderContainer}>
-      <Logo />
-      <Nav />
-    </Container>
+    <header className={s.Header}>
+      <Container className={s.HeaderContainer}>
+        <Logo />
+        <Nav />
+      </Container>
+    </header>
   )
 }

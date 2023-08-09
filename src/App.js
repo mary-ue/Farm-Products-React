@@ -1,9 +1,9 @@
-import { MainPage } from './compnents/pages/MainPage/MainPage';
+import { PageWrapper } from './compnents/layout/PageWrapper/PageWrapper';
 
 function App() {
   return (
     <>
-      <MainPage />
+      <PageWrapper />
     </>
   );
 }

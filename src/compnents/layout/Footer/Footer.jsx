@@ -4,9 +4,11 @@ import s from './Footer.module.css';
 
 export const Footer = () => {
   return (
+    <footer className={s.Footer}>
     <Container className={s.FooterContainer}>
       <Logo />
       <p className={s.FooterCopy}>Создано {new Date().getFullYear()}</p>
     </Container>
+    </footer>
   )
 }
