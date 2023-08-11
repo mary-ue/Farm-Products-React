@@ -3,14 +3,14 @@ import { Header } from "../../layout/Header/Header";
 import { MainPage } from "../../pages/MainPage/MainPage";
 import s from './PageWrapper.module.css';
 
-export const PageWrapper = () => {
-
+export const PageWrapper = ({advantages}) => {
+  
 
   return (
     <>
     <Header />
     <main className={s.PageWrapper_main}>
-      <MainPage />
+      <MainPage advantages={advantages} />
     </main>
     <Footer />
     </>

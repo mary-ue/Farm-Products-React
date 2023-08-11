@@ -7,9 +7,9 @@ export const TitleSize = {
   DEFAULT: '',
 };
 
-export const Title = ({ children, size }) => {
+export const Title = ({ children, size, className }) => {
   return (
-    <h2 className={cn(s.title, size ? s[`title_${size}`] : '')}>
+    <h2 className={cn(s.title, size ? s[`title_${size}`] : '', className)}>
       {children}
     </h2>
   );

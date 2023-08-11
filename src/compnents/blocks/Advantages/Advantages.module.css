@@ -1,0 +1,13 @@
+.container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: grid;
+  justify-items: center;
+  gap: 64px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}

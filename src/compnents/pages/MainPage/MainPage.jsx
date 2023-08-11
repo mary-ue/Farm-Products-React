@@ -2,13 +2,13 @@ import { About } from "../../blocks/About/About"
 import { Advantages } from "../../blocks/Advantages/Advantages"
 
 
-export const MainPage = () => {
-
+export const MainPage = ({advantages}) => {
+  
 
   return (
     <>
       <About />
-      <Advantages />
+      <Advantages advantages={advantages} />
     </>
   )
 }
