@@ -5,8 +5,8 @@ import s from './About.module.css';
 export const About = () => {
   return (
     <section className={s.about}>
-      <Container className={s.about_container}>
-      <div className={s.content_wrapper}>
+      <Container className={s.container}>
+      <div className={s.contentWrapper}>
         <Title size={TitleSize.BIG}>
           Магазин фермерских продуктов с&nbsp;доставкой
         </Title>

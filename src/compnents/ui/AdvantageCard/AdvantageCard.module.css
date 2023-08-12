@@ -4,11 +4,11 @@
   background-color: #E1EDCE;
 }
 
-.card_negative {
+.cardNegative {
   background-color: #F8DDD7;
 }
 
-.main_content {
+.mainContent {
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: 56px 1fr;
@@ -31,7 +31,7 @@
   background-color: #88AA4D;
 }
 
-.owner_negative {
+.ownerNegative {
   background-color: #F75531;
 }
 

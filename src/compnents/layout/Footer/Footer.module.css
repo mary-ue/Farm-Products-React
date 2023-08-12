@@ -1,4 +1,4 @@
-.Footer {
+.footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -6,7 +6,7 @@
   border-top: 1px solid rgba(0, 0, 0, 0.10);
 }
 
-.FooterContainer {
+.container {
   padding-top: 18px;
   padding-bottom: 18px;
   display: flex;

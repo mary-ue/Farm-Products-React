@@ -7,8 +7,8 @@ export const Header = () => {
 
 
   return (
-    <header className={s.Header}>
-      <Container className={s.HeaderContainer}>
+    <header className={s.header}>
+      <Container className={s.container}>
         <Logo />
         <Nav />
       </Container>

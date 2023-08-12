@@ -9,7 +9,7 @@ export const PageWrapper = ({advantages}) => {
   return (
     <>
     <Header />
-    <main className={s.PageWrapper_main}>
+    <main className={s.pageWrapper_main}>
       <MainPage advantages={advantages} />
     </main>
     <Footer />

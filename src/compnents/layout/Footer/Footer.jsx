@@ -4,10 +4,10 @@ import s from './Footer.module.css';
 
 export const Footer = () => {
   return (
-    <footer className={s.Footer}>
-    <Container className={s.FooterContainer}>
+    <footer className={s.footer}>
+    <Container className={s.container}>
       <Logo />
-      <p className={s.FooterCopy}>Создано {new Date().getFullYear()}</p>
+      <p className={s.copy}>Создано {new Date().getFullYear()}</p>
     </Container>
     </footer>
   )

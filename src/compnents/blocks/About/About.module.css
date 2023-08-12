@@ -7,15 +7,15 @@
   background-color: #d8ecfe;
 }
 
-.about_container {
+.container {
   position: relative;
 }
 
-.about_container::before {
+.about::before {
   content: '';
   position: absolute;
   right: 177px;
-  bottom: -183px;
+  bottom: 0px;
   z-index: 5;
   display: block;
   width: 273px;
@@ -25,11 +25,11 @@
   background-image: url('../../../assets/img/HeroSvg.svg');
 }
 
-.about_container::after {
+.about::after {
   content: '';
   position: absolute;
   right: 90px;
-  bottom: -105px;
+  bottom: 77px;
   display: block;
   width: 446px;
   height: 447px;
@@ -38,7 +38,7 @@
   background-image: url('../../../assets/img/HeroSvg_2.svg');
 }
 
-.content_wrapper {
+.contentWrapper {
   max-width: 600px;
 }
 
