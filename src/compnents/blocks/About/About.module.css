@@ -11,11 +11,11 @@
   position: relative;
 }
 
-.about::before {
+.container::before {
   content: '';
   position: absolute;
   right: 177px;
-  bottom: 0px;
+  bottom: -183px;
   z-index: 5;
   display: block;
   width: 273px;
@@ -25,11 +25,11 @@
   background-image: url('../../../assets/img/HeroSvg.svg');
 }
 
-.about::after {
+.container::after {
   content: '';
   position: absolute;
   right: 90px;
-  bottom: 77px;
+  bottom: -106px;
   display: block;
   width: 446px;
   height: 447px;

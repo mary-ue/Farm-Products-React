@@ -1,19 +1,6 @@
-@font-face {
-  font-display: swap; 
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  src: url('assets/fonts/inter-v12-cyrillic_latin-regular.woff2') format('woff2'); 
-}
+import { createGlobalStyle } from 'styled-components';
 
-@font-face {
-  font-display: swap; 
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  src: url('assets/fonts/inter-v12-cyrillic_latin-700.woff2') format('woff2'); 
-}
-
+export const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
   height: 100%;
@@ -34,9 +21,11 @@ body {
   position: relative;
   min-width: 320px;
   min-height: 100%;
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-family: ${props => props.theme.fontFamily};
+  font-size: ${props => props.theme.fontSizeDefault};
+  line-height: 1.5;
   font-weight: 400;
+  color: ${props => props.theme.colorBlackForText};
   background-color: #ffffff;
 }
 
@@ -99,5 +88,4 @@ fieldset {
   padding-left: 90px;
   padding-right: 90px;
 }
-
-
+`;
