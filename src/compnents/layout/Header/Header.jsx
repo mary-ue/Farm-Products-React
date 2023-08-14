@@ -1,4 +1,4 @@
-import { ReactComponent as Logo } from '../../../assets/img/Logo.svg';
+import { Logo } from '../../ui/Logo/Logo';
 import { Container } from '../Container/Container';
 import { Nav } from '../Nav/Nav';
 import s from './Header.module.css';

@@ -1,5 +1,5 @@
+import { Logo } from "../../ui/Logo/Logo";
 import { Container } from "../Container/Container";
-import { ReactComponent as Logo } from '../../../assets/img/Logo.svg';
 import s from './Footer.module.css';
 
 export const Footer = () => {

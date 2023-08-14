@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../layout/Container/Container";
 
-export const StyledSectionAbout = styled.section`
+export const StyledSection = styled.section`
   padding-top: 183px;
   padding-bottom: 183px;
   position: relative;
@@ -10,7 +10,7 @@ export const StyledSectionAbout = styled.section`
   background-color: #d8ecfe;
 `;
 
-export const StyledContainerAbout = styled(Container)`
+export const StyledContainer = styled(Container)`
   position: relative;
 
 &::before {
@@ -40,11 +40,11 @@ export const StyledContainerAbout = styled(Container)`
 }
 `;
 
-export const ContentWrapperAbout = styled.div`
+export const StyledWrapper = styled.div`
   max-width: 600px;
 `;
 
-export const TextAbout = styled.p`
+export const StyledText = styled.p`
   margin-top: 24px;
   padding-right: 110px;
   font-size: 18px;
