@@ -20,7 +20,7 @@ export const Advantages = ({ advantages }) => {
               );
             })}
           </StyledList>
-          <Button>Купить</Button>
+          <Button minWidth={260} link="/buy">Купить</Button>
         </AdvantagesContainer>
       </section>
     )

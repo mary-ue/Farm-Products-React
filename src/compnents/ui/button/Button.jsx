@@ -1,11 +1,14 @@
-import s from './Button.module.css'
+import { StyledButton } from './styles.js';
 
-export const Button = ({children}) => {
-
+export const Button = ({children, minWidth, link, className}) => {
 
   return (
-    <button className={s.button} type="button">
+    <StyledButton 
+      className={className}
+      $minWidth={minWidth} 
+      {...(link ? { href: link} : { as: "button", type: "button" })}
+    >
       {children}
-    </button>
+    </StyledButton>
   )
 }

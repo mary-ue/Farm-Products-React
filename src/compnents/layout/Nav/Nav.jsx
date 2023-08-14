@@ -1,11 +1,11 @@
-import { Button } from "../../ui/Button/Button"
+import { Button } from "../../ui/Button/Button";
 
 export const Nav = () => {
 
 
   return (
     <>
-      <Button>Купить</Button>
+      <Button minWidth={260} link="/buy">Купить</Button>
     </>
   )
 }
