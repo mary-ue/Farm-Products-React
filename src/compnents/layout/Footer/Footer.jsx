@@ -1,14 +1,13 @@
 import { Logo } from "../../ui/Logo/Logo";
-import { Container } from "../Container/Container";
-import s from './Footer.module.css';
+import { StyledContainer, StyledFooter } from "./styles";
 
 export const Footer = () => {
   return (
-    <footer className={s.footer}>
-    <Container className={s.container}>
+    <StyledFooter>
+    <StyledContainer>
       <Logo />
-      <p className={s.copy}>Создано {new Date().getFullYear()}</p>
-    </Container>
-    </footer>
+      <p>Создано {new Date().getFullYear()}</p>
+    </StyledContainer>
+    </StyledFooter>
   )
 }

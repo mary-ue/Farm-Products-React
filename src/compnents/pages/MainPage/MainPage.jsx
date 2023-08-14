@@ -4,8 +4,6 @@ import { TitleLevel } from "../../ui/Title/Title"
 
 
 export const MainPage = ({advantages}) => {
-  
-
   return (
     <>
       <About level={TitleLevel.H1} />
