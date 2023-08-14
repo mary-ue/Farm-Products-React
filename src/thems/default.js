@@ -14,4 +14,5 @@ export const defaultTheme = {
   fontSizeDefault: '18px',
   footerHeight: '80px', 
   pageWidth: '1280px',
+  sectionPadding: '100px',
 }

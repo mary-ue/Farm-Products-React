@@ -51,17 +51,6 @@ a {
   color: inherit;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  margin: 0;
-  padding: 0;
-}
-
 h1,
 h2,
 h3,
@@ -80,12 +69,5 @@ fieldset {
 .visuallyHidden {
   position: fixed;
   transform: scale(0);
-}
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding-left: 90px;
-  padding-right: 90px;
 }
 `;

@@ -1,7 +1,10 @@
-import cn from 'classnames';
+import { StyledContainer } from "./styles";
 
-export const Container = ({className, children}) => {
+export const Container = ({children, className}) => {
+
   return (
-    <div className={cn('container', className)}>{children}</div>
+    <StyledContainer className={className}>
+      {children}
+    </StyledContainer>
   )
 }

@@ -1,17 +1,19 @@
-.about {
+import styled from "styled-components";
+import { Container } from "../../layout/Container/Container";
+
+export const StyledSectionAbout = styled.section`
   padding-top: 183px;
   padding-bottom: 183px;
   position: relative;
   z-index: 1;
   min-height: 600px;
   background-color: #d8ecfe;
-}
+`;
 
-.container {
+export const StyledContainerAbout = styled(Container)`
   position: relative;
-}
 
-.container::before {
+&::before {
   content: '';
   position: absolute;
   right: 177px;
@@ -25,7 +27,7 @@
   background-image: url('../../../assets/img/HeroSvg.svg');
 }
 
-.container::after {
+&::after {
   content: '';
   position: absolute;
   right: 90px;
@@ -33,18 +35,23 @@
   display: block;
   width: 446px;
   height: 447px;
-  /* background-position: right center; */
   background-repeat: no-repeat;
   background-image: url('../../../assets/img/HeroSvg_2.svg');
 }
+`;
 
-.contentWrapper {
+export const ContentWrapperAbout = styled.div`
   max-width: 600px;
-}
+`;
 
-.text {
+export const TextAbout = styled.p`
   margin-top: 24px;
   padding-right: 110px;
   font-size: 18px;
   line-height: 150%;
-}
+`;
+
+
+// }
+
+// .text {div

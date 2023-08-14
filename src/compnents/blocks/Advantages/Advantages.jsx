@@ -1,26 +1,27 @@
-import { Container } from '../../layout/Container/Container';
+import { Li } from '../../styled/index';
 import { AdvantageCard } from '../../ui/AdvantageCard/AdvantageCard';
 import { Button } from '../../ui/Button/Button';
 import { Title } from '../../ui/Title/Title';
-import s from './Advantages.module.css';
+import { AdvantagesContainer } from './styles.js';
+import { StyledList } from './styles.js';
 
 export const Advantages = ({ advantages }) => {
   return (
     advantages && (
-      <section className={s.advantages}>
-        <Container className={s.container}>
-          <Title className={s.title}>Почему фермерские продукты лучше?</Title>
-          <ul className={s.list}>
+      <section>
+        <AdvantagesContainer>
+          <Title>Почему фермерские продукты лучше?</Title>
+          <StyledList>
             {advantages.map((advantage) => {
               return (
-                <li className={s.item} key={advantage.id}>
+                <Li key={advantage.id}>
                   <AdvantageCard {...advantage} />
-                </li>
+                </Li>
               );
             })}
-          </ul>
+          </StyledList>
           <Button>Купить</Button>
-        </Container>
+        </AdvantagesContainer>
       </section>
     )
   );
