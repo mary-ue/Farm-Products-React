@@ -1,12 +1,12 @@
 import { Title, TitleSize } from '../../ui/Title/Title';
 import { StyledContainerAbout, StyledSectionAbout, ContentWrapperAbout, TextAbout } from './styles';
 
-export const About = () => {
+export const About = ({ level }) => {
   return (
     <StyledSectionAbout>
       <StyledContainerAbout>
       <ContentWrapperAbout>
-        <Title size={TitleSize.BIG}>
+        <Title size={TitleSize.BIG} title={level}>
           Магазин фермерских продуктов с&nbsp;доставкой
         </Title>
         <TextAbout>

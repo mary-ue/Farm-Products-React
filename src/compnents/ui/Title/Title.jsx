@@ -1,5 +1,4 @@
-import cn from 'classnames';
-import s from './Title.module.css';
+import { StyledTitle } from "./styles";
 
 export const TitleSize = {
   BIG: 'big', 
@@ -7,10 +6,23 @@ export const TitleSize = {
   DEFAULT: '',
 };
 
-export const Title = ({ children, size, className }) => {
-  return (
-    <h2 className={cn(s.title, size ? s[`title_${size}`] : '', className)}>
-      {children}
-    </h2>
-  );
+export const TitleLevel = {
+  H1: "1",
+  H2: "2",
+  H3: "3",
+  H4: "4",
+  H5: "5",
+  H6: "6"
 };
+
+export const Title = ({ level = 1, size, children, className}) => {
+  return (
+    <StyledTitle
+      className={className}
+      as={`h${level}`}
+      $size={size}
+    >
+      {children}
+    </StyledTitle>
+  )
+}
