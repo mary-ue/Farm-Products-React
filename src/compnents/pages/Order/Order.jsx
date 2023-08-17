@@ -1,8 +1,16 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Mousewheel, Scrollbar } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 import { Button } from "../../ui/Button/Button";
 import { Panel } from "../../ui/Panel/Panel";
 import { TextInput } from "../../ui/TextInput/TextInput";
 import { Title, TitleLevel, TitleSize } from "../../ui/Title/Title";
-import { Form, LeftColumn, OrderContainer, PriceLabel, PriceValue, RightColumn } from "./styles";
+import { Form, LeftColumn, OrderContainer, PriceLabel, PriceValue, ProductsSwiper, RightColumn } from "./styles";
+import { ProductCard } from "../../ui/ProductCard/ProductCard";
+
 
 export const Order = ({products}) => {
   // console.log(products)
@@ -31,7 +39,25 @@ export const Order = ({products}) => {
             </Panel>
           </LeftColumn>
           <RightColumn>
-            Right column content
+            <ProductsSwiper
+              modules={[Pagination, Mousewheel, Scrollbar]}
+              spaceBetween={12}
+              direction="vertical"
+              slidesPerView="auto"
+              scrollbar={{ draggable: true }}
+              mousewheel
+              pagination={{ type: 'fraction'}}
+            >
+              {
+                products?.map((product) => {
+                  return (
+                    <SwiperSlide key={product.id}>
+                      <ProductCard product={product} />
+                    </SwiperSlide>
+                  )
+                })
+              }
+            </ProductsSwiper>
           </RightColumn>
         </Form>
       </OrderContainer>

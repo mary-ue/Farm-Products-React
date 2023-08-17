@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Container } from '../../layout/Container/Container';
+import { Swiper } from 'swiper/react';
 
 const leftWidth = '353px';
 
@@ -33,4 +34,16 @@ export const RightColumn = styled.div`
   flex: 1;
   height: min-content;
   background-color: yellow;
+`;
+
+export const ProductsSwiper = styled(Swiper)`
+  width: 100%;
+
+  .swiper-pagination {
+    display: none;
+  }
+
+  .swiper-slide {
+    flex-shrink: 1;
+  }
 `;
