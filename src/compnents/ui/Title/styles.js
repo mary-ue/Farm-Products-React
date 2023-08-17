@@ -3,9 +3,10 @@ import { TitleSize } from "./Title";
 
 export const StyledTitle = styled.h1`
   margin: 0;
+  margin-bottom: ${props => props.marginBottom || 0}px;
   padding: 0;
   font-weight: 700;
-  line-height: 41px;
+  line-height: calc(41 / 36);
   font-size: ${(props) => {
     let fontSize = '36px';
     if (props.$size === TitleSize.BIG ) {

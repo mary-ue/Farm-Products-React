@@ -15,12 +15,13 @@ export const TitleLevel = {
   H6: "6"
 };
 
-export const Title = ({ level = 1, size, children, className}) => {
+export const Title = ({ level = 1, size, children, className, marginBottom}) => {
   return (
     <StyledTitle
       className={className}
       as={`h${level}`}
       $size={size}
+      marginBottom={marginBottom}
     >
       {children}
     </StyledTitle>
