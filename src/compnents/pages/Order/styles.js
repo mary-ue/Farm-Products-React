@@ -33,7 +33,6 @@ export const PriceValue = styled.p`
 export const RightColumn = styled.div`
   flex: 1;
   height: min-content;
-  background-color: yellow;
 `;
 
 export const ProductsSwiper = styled(Swiper)`
