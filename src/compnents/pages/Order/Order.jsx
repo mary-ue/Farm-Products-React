@@ -1,9 +1,9 @@
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel, Scrollbar } from "swiper/modules";
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/mousewheel';
 import { Button } from "../../ui/Button/Button";
 import { Panel } from "../../ui/Panel/Panel";
 import { TextInput } from "../../ui/TextInput/TextInput";
