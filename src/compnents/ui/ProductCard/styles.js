@@ -14,7 +14,7 @@ export const ProductImg = styled(Img)`
 
 export const ContentWrapper = styled.div`
   position: relative;
-  /* padding-bottom: 30px; */
+  padding-bottom: 30px;
   min-height: 248px;
 `;
 
