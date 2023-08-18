@@ -12,7 +12,7 @@ export const Checkbox = ({
   props
 }) => {
   const LabelComponent = labelComponent;
-
+  
   return (
     <Label>
       <VisuallyHiddenInput 

@@ -8,14 +8,14 @@ import { Button } from "../../ui/Button/Button";
 import { Panel } from "../../ui/Panel/Panel";
 import { TextInput } from "../../ui/TextInput/TextInput";
 import { Title, TitleLevel, TitleSize } from "../../ui/Title/Title";
-import { Form, LeftColumn, OrderContainer, PriceLabel, PriceValue, ProductsSwiper, RightColumn } from "./styles";
+import { CheckboxLabel, Form, LeftColumn, OrderContainer, PriceLabel, PriceValue, ProductsSwiper, RightColumn } from "./styles";
 import { ProductCard } from "../../ui/ProductCard/ProductCard";
+import { useState } from "react";
+import { CheckboxList } from "../../ui/CheckboxList/CheckboxList";
 
 
 export const Order = ({products}) => {
-  // console.log(products)
-
-
+  const [selectProductIds, setSelectProductIds] = useState([]);
 
   return (
     <main>
@@ -26,7 +26,16 @@ export const Order = ({products}) => {
               <Title level={TitleLevel.H2} size={TitleSize.SMALL} marginBottom={12}>
                 Выберите продукты
               </Title>
-              Checkboxes
+              <CheckboxList 
+                labelComponent={CheckboxLabel}
+                name={'select-products'}
+                options={products.map((product) => ({
+                  value: product.id, 
+                  title: product.name
+                }))}
+                selectValues={selectProductIds}
+                onChange={setSelectProductIds}
+              />
             </Panel>
             <Panel>
               <Title level={TitleLevel.H2} size={TitleSize.SMALL} marginBottom={24}>
