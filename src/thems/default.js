@@ -12,7 +12,8 @@ export const defaultTheme = {
   pagePadding: '90px', 
   fontFamily: '"Inter", "Arial", sans-serif',
   fontSizeDefault: '18px',
-  footerHeight: '80px', 
   pageWidth: '1280px',
   sectionPadding: '100px',
+  headerHeight: '80px',
+  footerHeight: '80px',
 }

@@ -4,7 +4,7 @@ export const TextInput = styled.input.attrs({
   type: 'text',
 })`
   padding: 14px 12px;
-  margin-bottom:  ${props => props.marginBottom || 0}px;
+  margin-bottom:  ${props => props.$marginBottom || 0}px;
   display: flex;
   height: 48px; 
   width: 100%;

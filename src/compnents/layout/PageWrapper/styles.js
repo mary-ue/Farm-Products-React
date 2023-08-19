@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
-export const StyledWrapper = styled.main`
-  padding-bottom: 80px;
+export const Main = styled.main`
+  width: ${(props) => props.theme.pageWidth};
+  margin: 0 auto;
+  background-color: ${props => props.theme.colorGray};
 `;

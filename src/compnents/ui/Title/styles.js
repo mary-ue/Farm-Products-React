@@ -3,7 +3,7 @@ import { TitleSize } from "./Title";
 
 export const StyledTitle = styled.h1`
   margin: 0;
-  margin-bottom: ${props => props.marginBottom || 0}px;
+  margin-bottom: ${props => props.$marginBottom || 0}px;
   padding: 0;
   font-weight: 700;
   line-height: calc(41 / 36);

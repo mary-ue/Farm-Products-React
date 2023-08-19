@@ -27,7 +27,7 @@ export const ProductCard = ({ product }) => {
       <CardWrapper>
         <ProductImg src={image} alt={name} />
         <ContentWrapper>
-        <Title level={TitleLevel.H3} size={TitleSize.MEDIUM} marginBottom={16}>
+        <Title level={TitleLevel.H3} size={TitleSize.MEDIUM} $marginBottom={16}>
           {name}
         </Title>
         <Tabs maxContentHeiht="105px" tabsList={tabsList} />

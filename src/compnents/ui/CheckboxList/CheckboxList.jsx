@@ -1,6 +1,6 @@
-import Li from "../../styled/li/li"
-import { Checkbox } from "../Checkbox/Checkbox"
-import { CheckboxesUl } from "./styles"
+import { Checkbox } from "../Checkbox/Checkbox";
+import { CheckboxesLi, CheckboxesUl } from "./styles";
+import Li from "../../styled/li/li";
 
 export const CheckboxList = ({
   selectValues, // selected values arr

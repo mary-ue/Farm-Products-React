@@ -14,13 +14,13 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
   position: relative;
   min-width: 320px;
-  min-height: 100%;
+  ${'' /* min-height: 100%; */}
   font-family: ${props => props.theme.fontFamily};
   font-size: ${props => props.theme.fontSizeDefault};
   line-height: 1.5;

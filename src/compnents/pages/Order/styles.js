@@ -1,22 +1,36 @@
 import styled, { css } from 'styled-components';
 import { Container } from '../../layout/Container/Container';
 import { Swiper } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/mousewheel';
+
 import checkboxSelect from '../../../assets/img/Checkbox.svg';
 
 const leftWidth = '353px';
 
 export const OrderContainer = styled(Container)`
-  padding-top: 40px;
-  padding-bottom: 40px;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
 `;
 
 export const Form = styled.form`
+  position: absolute;
+  top: ${(props) => props.theme.headerHeight};
+  bottom: ${(props) => props.theme.footerHeight};
+  padding-top: 40px;
+  padding-bottom: 0;
   display: flex;
   gap: 20px;
+  max-width: 1100px;
 `;
 
 export const LeftColumn = styled.div`
   flex: 0 0 ${leftWidth};
+  overflow-y: overlay;
 `;
 
 export const PriceLabel = styled.label`
@@ -26,7 +40,7 @@ export const PriceLabel = styled.label`
 `;
 
 export const PriceValue = styled.p`
-  margin-bottom: ${props => props.marginBottom ? props.marginBottom : 0 }px;
+  margin-bottom: ${props => props.$marginBottom ? props.$marginBottom : 0 }px;
   font-size: large;
   font-weight: bold;
 `;
@@ -38,6 +52,7 @@ export const RightColumn = styled.div`
 
 export const ProductsSwiper = styled(Swiper)`
   width: 100%;
+  height: calc(100vh - 240px);
 
   .swiper-pagination {
     display: none;

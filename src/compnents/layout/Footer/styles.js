@@ -6,6 +6,8 @@ export const StyledFooter = styled.footer`
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 5;
+  background-color: ${props => props.theme.colorWhite};
   border-top: 1px solid rgba(0, 0, 0, 0.10);
 `;
 
