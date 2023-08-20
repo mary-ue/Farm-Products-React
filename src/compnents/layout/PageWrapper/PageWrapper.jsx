@@ -10,10 +10,8 @@ export const PageWrapper = ({ products }) => {
   return (
     <>
     <Header />
-    <Main>
       {/* <MainPage advantages={advantages} /> */}
       <Order products={products}  />
-    </Main>
     <Footer />
     </>
   )

@@ -10,6 +10,10 @@ import checkboxSelect from '../../../assets/img/Checkbox.svg';
 
 const leftWidth = '353px';
 
+export const Main = styled.main`
+  background-color: ${props => props.theme.colorGray};
+`;
+
 export const OrderContainer = styled(Container)`
   position: relative;
   top: 0;
@@ -52,7 +56,7 @@ export const RightColumn = styled.div`
 
 export const ProductsSwiper = styled(Swiper)`
   width: 100%;
-  height: calc(100vh - 240px);
+  height: calc(100vh - 200px);
 
   .swiper-pagination {
     display: none;

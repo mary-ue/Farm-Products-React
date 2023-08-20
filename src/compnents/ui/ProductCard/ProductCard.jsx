@@ -30,7 +30,7 @@ export const ProductCard = ({ product }) => {
         <Title level={TitleLevel.H3} size={TitleSize.MEDIUM} $marginBottom={16}>
           {name}
         </Title>
-        <Tabs maxContentHeiht="105px" tabsList={tabsList} />
+        <Tabs maxContentHeight="105px" tabsList={tabsList} />
         <Price>
           {price} руб./ {weight} гр.
         </Price>
