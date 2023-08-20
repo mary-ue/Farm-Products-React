@@ -7,8 +7,8 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/mousewheel';
 
 import checkboxSelect from '../../../assets/img/Checkbox.svg';
-import { Price } from '../../ui/ProductCard/styles';
 import { TotalPrice } from '../../ui/Price/Price';
+import { TextInput } from '../../ui/TextInput/TextInput';
 
 const leftWidth = '353px';
 
@@ -37,6 +37,10 @@ export const Form = styled.form`
 export const LeftColumn = styled.div`
   flex: 0 0 ${leftWidth};
   overflow-y: overlay;
+`;
+
+export const AddressInput = styled(TextInput)`
+  margin-bottom: ${props => props.$marginBottom ? props.$marginBottom : 0 }px;
 `;
 
 export const PriceLabel = styled.label`
@@ -97,4 +101,11 @@ export const CheckboxLabel = styled.span`
     `
     }
   }
+`;
+
+export const NotFoundText = styled.div`
+  position: absolute;
+  top: ${(props) => props.theme.headerHeight};
+  bottom: ${(props) => props.theme.footerHeight};
+  padding-top: 40px;
 `;
