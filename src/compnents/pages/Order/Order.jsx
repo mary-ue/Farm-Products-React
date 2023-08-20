@@ -1,29 +1,45 @@
-import { SwiperSlide } from "swiper/react";
-import { Pagination, Mousewheel, Scrollbar } from "swiper/modules";
+import { SwiperSlide } from 'swiper/react';
+import { Pagination, Mousewheel, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/mousewheel';
 
-import { Button } from "../../ui/Button/Button";
-import { Panel } from "../../ui/Panel/Panel";
-import { TextInput } from "../../ui/TextInput/TextInput";
-import { Title, TitleLevel, TitleSize } from "../../ui/Title/Title";
-import { CheckboxLabel, Form, LeftColumn, Main, OrderContainer, OrderMain, PriceLabel, PriceValue, ProductsSwiper, RightColumn } from "./styles";
-import { ProductCard } from "../../ui/ProductCard/ProductCard";
-import { useState } from "react";
-import { CheckboxList } from "../../ui/CheckboxList/CheckboxList";
+import { Button } from '../../ui/Button/Button';
+import { Panel } from '../../ui/Panel/Panel';
+import { TextInput } from '../../ui/TextInput/TextInput';
+import { Title, TitleLevel, TitleSize } from '../../ui/Title/Title';
+import {
+  CheckboxLabel,
+  Form,
+  LeftColumn,
+  Main,
+  OrderContainer,
+  OrderMain,
+  PriceLabel,
+  PriceValue,
+  ProductsSwiper,
+  RightColumn,
+} from './styles';
+import { ProductCard } from '../../ui/ProductCard/ProductCard';
+import { useState } from 'react';
+import { CheckboxList } from '../../ui/CheckboxList/CheckboxList';
 
-
-export const Order = ({products}) => {
+export const Order = ({ products }) => {
   const [swiperRef, setSwiperRef] = useState(null);
   const [selectProductIds, setSelectProductIds] = useState([]);
 
+  const selectProducts = selectProductIds.map((id) =>
+    products.find((product) => product.id === id)
+  );
+
+  const fullPrice = selectProducts.reduce((sum, product) => (sum += product.price), 0)
+
   const handleOnClickProduct = (value, index) => {
     if (!selectProductIds.includes(value)) {
-      swiperRef.slideTo(index, 2)
+      swiperRef.slideTo(index, 2);
     }
-  }
+  };
 
   return (
     <Main>
@@ -31,15 +47,19 @@ export const Order = ({products}) => {
         <Form>
           <LeftColumn>
             <Panel $marginBottom={18}>
-              <Title level={TitleLevel.H2} size={TitleSize.SMALL} $marginBottom={12}>
+              <Title
+                level={TitleLevel.H2}
+                size={TitleSize.SMALL}
+                $marginBottom={12}
+              >
                 Выберите продукты
               </Title>
-              <CheckboxList 
+              <CheckboxList
                 labelComponent={CheckboxLabel}
                 name={'select-products'}
                 options={products.map((product) => ({
-                  value: product.id, 
-                  title: product.name
+                  value: product.id,
+                  title: product.name,
                 }))}
                 selectValues={selectProductIds}
                 onChange={setSelectProductIds}
@@ -47,12 +67,22 @@ export const Order = ({products}) => {
               />
             </Panel>
             <Panel>
-              <Title level={TitleLevel.H2} size={TitleSize.SMALL} $marginBottom={24}>
+              <Title
+                level={TitleLevel.H2}
+                size={TitleSize.SMALL}
+                $marginBottom={24}
+              >
                 Сделать заказ
               </Title>
-              <TextInput placeholder="Введите адрес доставки" $marginBottom={20} />
+              <TextInput
+                placeholder="Введите адрес доставки"
+                $marginBottom={20}
+              />
               <PriceLabel>Цена</PriceLabel>
-              <PriceValue $marginBottom={32}>1200</PriceValue>
+              <PriceValue 
+                $marginBottom={32} 
+                value={fullPrice}
+              />
               <Button>Купить</Button>
             </Panel>
           </LeftColumn>
@@ -65,21 +95,19 @@ export const Order = ({products}) => {
               slidesPerView="auto"
               scrollbar={{ draggable: true }}
               mousewheel
-              pagination={{ type: 'fraction'}}
+              pagination={{ type: 'fraction' }}
             >
-              {
-                products?.map((product) => {
-                  return (
-                    <SwiperSlide key={product.id}>
-                      <ProductCard product={product} />
-                    </SwiperSlide>
-                  )
-                })
-              }
+              {products?.map((product) => {
+                return (
+                  <SwiperSlide key={product.id}>
+                    <ProductCard product={product} />
+                  </SwiperSlide>
+                );
+              })}
             </ProductsSwiper>
           </RightColumn>
         </Form>
       </OrderContainer>
     </Main>
-  )
-}
+  );
+};

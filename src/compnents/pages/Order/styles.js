@@ -7,6 +7,8 @@ import 'swiper/css/scrollbar';
 import 'swiper/css/mousewheel';
 
 import checkboxSelect from '../../../assets/img/Checkbox.svg';
+import { Price } from '../../ui/ProductCard/styles';
+import { TotalPrice } from '../../ui/Price/Price';
 
 const leftWidth = '353px';
 
@@ -43,10 +45,8 @@ export const PriceLabel = styled.label`
   font-size: 14px;
 `;
 
-export const PriceValue = styled.p`
+export const PriceValue = styled(TotalPrice)`
   margin-bottom: ${props => props.$marginBottom ? props.$marginBottom : 0 }px;
-  font-size: large;
-  font-weight: bold;
 `;
 
 export const RightColumn = styled.div`
