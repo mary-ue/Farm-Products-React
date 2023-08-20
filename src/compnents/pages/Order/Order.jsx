@@ -16,7 +16,14 @@ import { CheckboxList } from "../../ui/CheckboxList/CheckboxList";
 
 
 export const Order = ({products}) => {
+  const [swiperRef, setSwiperRef] = useState(null);
   const [selectProductIds, setSelectProductIds] = useState([]);
+
+  const handleOnClickProduct = (value, index) => {
+    if (!selectProductIds.includes(value)) {
+      swiperRef.slideTo(index, 2)
+    }
+  }
 
   return (
     <Main>
@@ -36,6 +43,7 @@ export const Order = ({products}) => {
                 }))}
                 selectValues={selectProductIds}
                 onChange={setSelectProductIds}
+                onClickLabel={handleOnClickProduct}
               />
             </Panel>
             <Panel>
@@ -51,6 +59,7 @@ export const Order = ({products}) => {
           <RightColumn>
             <ProductsSwiper
               modules={[Pagination, Mousewheel, Scrollbar]}
+              onSwiper={setSwiperRef}
               spaceBetween={12}
               direction="vertical"
               slidesPerView="auto"
