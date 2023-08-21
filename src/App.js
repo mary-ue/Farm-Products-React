@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <BrowserRouter>
+      <BrowserRouter basename='/Farm-Products-React'>
         <ScrollTop />
         <Routes>
           <Route path={AppRoute.MAIN} element={<PageWrapper />}>
