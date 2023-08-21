@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-html {
-  box-sizing: border-box;
-  height: 100%;
-}
 
 * {
   margin: 0;
@@ -15,6 +11,11 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
 }
 
 body {

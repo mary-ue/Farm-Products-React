@@ -6,12 +6,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { AppRoute } from './const';
 import { MainPage } from './compnents/pages/MainPage/MainPage';
 import { Order } from './compnents/pages/Order/Order';
+import { ScrollTop } from './compnents/ui/ScrollTop/ScrollTop';
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <BrowserRouter>
+        <ScrollTop />
         <Routes>
           <Route path={AppRoute.MAIN} element={<PageWrapper />}>
             <Route index element={<MainPage advantages={advantages} />} />
