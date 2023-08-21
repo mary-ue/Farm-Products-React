@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const StyledButton = styled.a`
+export const StyledButton = styled(Link)`
   display: block;
   padding: 0 24px;
   min-height: 60px;

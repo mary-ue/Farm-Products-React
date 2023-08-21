@@ -7,7 +7,8 @@ export const Button = ({children, minWidth, link, onClick, className, disabled, 
       className={className}
       $minWidth={minWidth} 
       disabled={disabled}
-      {...(link ? { href: link} : { as: "button", onClick, type: "button" })}
+      {...(link ? { to: link} : { as: "button", onClick, type: "button" })}
+      {...props}
     >
       {children}
     </StyledButton>

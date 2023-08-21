@@ -1,11 +1,12 @@
+import { AppRoute } from "../../../const";
 import { Button } from "../../ui/Button/Button";
 
 export const Nav = () => {
 
 
   return (
-    <>
-      <Button minWidth={260} link="/buy">Купить</Button>
-    </>
+    <nav>
+      <Button minWidth={260} link={AppRoute.ORDER}>Купить</Button>
+    </nav>
   )
 }

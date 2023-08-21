@@ -1,3 +1,4 @@
+import { AppRoute } from '../../../const';
 import { Li } from '../../styled/index';
 import { AdvantageCard } from '../../ui/AdvantageCard/AdvantageCard';
 import { Button } from '../../ui/Button/Button';
@@ -20,7 +21,7 @@ export const Advantages = ({ advantages, level }) => {
               );
             })}
           </StyledList>
-          <Button minWidth={260} link="/buy">Купить</Button>
+          <Button minWidth={260} link={AppRoute.ORDER}>Купить</Button>
         </AdvantagesContainer>
       </section>
     )
