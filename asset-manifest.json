@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Farm-Products-React/static/css/main.a8c7abe6.css",
+    "main.js": "/Farm-Products-React/static/js/main.ac3bb28c.js",
+    "static/media/Logo.svg": "/Farm-Products-React/static/media/Logo.4f2a5cafb26b3276c0057c5b8712d429.svg",
+    "index.html": "/Farm-Products-React/index.html",
+    "static/media/Checkbox.svg": "/Farm-Products-React/static/media/Checkbox.de53ff4e74a95633cc1f2c1e62080729.svg",
+    "main.a8c7abe6.css.map": "/Farm-Products-React/static/css/main.a8c7abe6.css.map",
+    "main.ac3bb28c.js.map": "/Farm-Products-React/static/js/main.ac3bb28c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a8c7abe6.css",
+    "static/js/main.ac3bb28c.js"
+  ]
+}
